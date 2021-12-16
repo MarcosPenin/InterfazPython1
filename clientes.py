@@ -23,3 +23,38 @@ class Clientes():
 
         except Exception as error:
             print('Error en módulo validar DNI', error)
+
+    def selSexo(self):
+        try:
+            if var.ui.femenino.isChecked():
+                print("Seleccionado femenino")
+            if var.ui.masculino.isChecked():
+                print("Seleccionado masculino")
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)
+
+    def selPago(self):
+        try:
+            if var.ui.chkEfectivo.isChecked():
+                print("Pagas en efectivo")
+            if var.ui.chkTarjeta.isChecked():
+                print("Pagas con tarjeta")
+            if var.ui.chkTransferencia.isChecked():
+                print("Pagas mediante transferencia")
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)
+
+    def cargarProv():
+        try:
+            prov=['','A Coruña','Lugo','Ourense','Pontevedra']
+            for i in prov:
+                var.ui.provincia.addItem(i)
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)
+
+
+    def selProv(prov):
+        try:
+            print("Ha seleccionado la provincia de ",prov)
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)

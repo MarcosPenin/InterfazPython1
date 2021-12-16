@@ -14,7 +14,12 @@ class Main(QtWidgets.QMainWindow):
         var.ui.setupUi(self)
         var.ui.salir.triggered.connect(events.Eventos.Salir)
         var.ui.dni.editingFinished.connect(clientes.Clientes.validarDni)
-
+        var.ui.elegirSexo.buttonClicked.connect(clientes.Clientes.selSexo)
+        var.chkPago = (var.ui.chkEfectivo, var.ui.chkTarjeta, var.ui.chkTransferencia)
+        for i in var.chkPago:
+            i.stateChanged.connect(clientes.Clientes.selPago)
+        clientes.Clientes.cargarProv()
+        var.ui.provincia.activated[str].connect(clientes.Clientes.selProv)
 
 class DialogSalir(QtWidgets.QDialog):
     def __init__(self):
