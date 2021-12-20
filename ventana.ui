@@ -65,7 +65,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>120</y>
+      <y>110</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -175,7 +175,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="aceptar_2">
+   <widget class="QPushButton" name="botonSalir">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -238,7 +238,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="sexo_2">
+   <widget class="QLabel" name="metodosPagoLabel">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -303,7 +303,7 @@
      <enum>Qt::RichText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="direccion">
@@ -316,7 +316,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="nombreLabel_2">
+   <widget class="QLabel" name="provinciaLabel">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -360,7 +360,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -433,10 +433,10 @@
      <enum>Qt::RichText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -468,6 +468,74 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="fechaLabel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>110</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Fecha Alta: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fecha">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>100</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>../Proxecto1/img/calendar.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fechaAlta">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>110</y>
+      <width>133</width>
+      <height>20</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

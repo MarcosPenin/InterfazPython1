@@ -58,3 +58,18 @@ class Clientes():
             print("Ha seleccionado la provincia de ",prov)
         except Exception as error:
             print("Error en módulo de selección de sexo:", error)
+
+
+    def abrirCalendar():
+        try:
+            var.dlgCalendar.show()
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)
+
+    def cargarFecha(qDate):
+        try:
+            data=('{0}/{1}/{2}'.format(qDate.day(),qDate.month(),qDate.year()))
+            var.ui.fechaAlta.setText(str(data))
+            var.dlgCalendar.hide()
+        except Exception as error:
+            print("Error en módulo de selección de sexo:", error)
