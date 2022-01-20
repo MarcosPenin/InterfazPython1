@@ -14,19 +14,6 @@
    <string>Proxecto1</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="aceptar">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>340</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Aceptar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="xestionClientes">
     <property name="geometry">
      <rect>
@@ -160,32 +147,6 @@
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>320</y>
-      <width>711</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botonSalir">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>340</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Salir</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -436,39 +397,6 @@
      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>230</y>
-      <width>223</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QCheckBox" name="chkEfectivo">
-       <property name="text">
-        <string>Efectivo</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="chkTarjeta">
-       <property name="text">
-        <string>Tarjeta</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="chkTransferencia">
-       <property name="text">
-        <string>Transferencia</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="fechaLabel">
     <property name="geometry">
      <rect>
@@ -517,7 +445,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normalon>../Proxecto1/img/calendar.png</normalon>
+      <normalon>calendario.png</normalon>
      </iconset>
     </property>
     <property name="iconSize">
@@ -537,6 +465,253 @@
      </rect>
     </property>
    </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>761</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabClientes">
+     <attribute name="title">
+      <string>Clientes</string>
+     </attribute>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>711</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="aceptar">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>470</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aceptar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="botonSalir">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>470</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Salir</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tablaClientes">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>711</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>DNI</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Apellidos</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Nombre</string>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+     </widget>
+     <widget class="QCheckBox" name="chkEfectivo">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Efectivo</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkTarjeta">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tarjeta</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkTransferencia">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transferencia</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabFacturacion">
+     <attribute name="title">
+      <string>Facturación</string>
+     </attribute>
+     <widget class="QCheckBox" name="chkTransferencia_2">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transferencia</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkTarjeta_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tarjeta</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkEfectivo_2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Efectivo</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabProductos">
+     <attribute name="title">
+      <string>Productos</string>
+     </attribute>
+     <widget class="QCheckBox" name="chkTransferencia_3">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transferencia</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkTarjeta_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tarjeta</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkEfectivo_3">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>200</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Efectivo</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>tabWidget</zorder>
+   <zorder>xestionClientes</zorder>
+   <zorder>dni</zorder>
+   <zorder>dniLabel</zorder>
+   <zorder>nombreLabel</zorder>
+   <zorder>nombre</zorder>
+   <zorder>line</zorder>
+   <zorder>label</zorder>
+   <zorder>sexo</zorder>
+   <zorder>metodosPagoLabel</zorder>
+   <zorder>direccionLabl</zorder>
+   <zorder>direccion</zorder>
+   <zorder>provinciaLabel</zorder>
+   <zorder>provincia</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>apellidos</zorder>
+   <zorder>apellidosLabel</zorder>
+   <zorder>fechaLabel</zorder>
+   <zorder>fecha</zorder>
+   <zorder>fechaAlta</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

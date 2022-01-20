@@ -24,7 +24,7 @@ class Main(QtWidgets.QMainWindow):
         clientes.Clientes.cargarProv()
         var.ui.provincia.activated[str].connect(clientes.Clientes.selProv)
         var.ui.fecha.clicked.connect(clientes.Clientes.abrirCalendar)
-
+        var.ui.aceptar.clicked.connect(clientes.Clientes.showClients)
 
 class DialogSalir(QtWidgets.QDialog):
     def __init__(self):
@@ -32,8 +32,6 @@ class DialogSalir(QtWidgets.QDialog):
         var.dlgSlr = windowaviso.Ui_Dialog()
         var.dlgSlr.setupUi(self)
         var.ui.botonSalir.clicked.connect(events.Eventos.Salir2)
-
-
 
 
 class DialogCalendar(QtWidgets.QDialog):

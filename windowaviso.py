@@ -28,7 +28,7 @@ class Ui_Dialog(object):
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setGeometry(QtCore.QRect(160, 40, 71, 61))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("../Proxecto1/warning.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("warning.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
 

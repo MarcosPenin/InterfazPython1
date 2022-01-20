@@ -27,3 +27,9 @@ class Eventos():
                 var.dlgSlr.hide()
         except Exception as error:
             print("Error: %s", str(error))
+
+
+
+
+
+

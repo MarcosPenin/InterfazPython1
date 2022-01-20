@@ -1,3 +1,5 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
 import var
 
 class Clientes():
@@ -26,23 +28,27 @@ class Clientes():
 
     def selSexo(self):
         try:
+            global sex
             if var.ui.femenino.isChecked():
-                print("Seleccionado femenino")
+                sex="Mujer"
             if var.ui.masculino.isChecked():
-                print("Seleccionado masculino")
+               sex="Hombre"
         except Exception as error:
             print("Error en módulo de selección de sexo:", error)
 
     def selPago(self):
         try:
+            var.pay=[]
             if var.ui.chkEfectivo.isChecked():
-                print("Pagas en efectivo")
+                var.pay.append("Efectivo")
             if var.ui.chkTarjeta.isChecked():
-                print("Pagas con tarjeta")
+                var.pay.append("Tarjeta")
             if var.ui.chkTransferencia.isChecked():
-                print("Pagas mediante transferencia")
+                var.pay.append("Transferencia")
         except Exception as error:
             print("Error en módulo de selección de sexo:", error)
+
+
 
     def cargarProv():
         try:
@@ -55,7 +61,8 @@ class Clientes():
 
     def selProv(prov):
         try:
-            print("Ha seleccionado la provincia de ",prov)
+            global vpro
+            vpro= prov
         except Exception as error:
             print("Error en módulo de selección de sexo:", error)
 
@@ -73,3 +80,35 @@ class Clientes():
             var.dlgCalendar.hide()
         except Exception as error:
             print("Error en módulo de selección de sexo:", error)
+
+    def showClients():
+        try:
+            newcli = []
+            clitab = []
+            client= [var.ui.dni, var.ui.apellidos, var.ui.nombre]
+            k = 0
+
+            for i in client:
+                newcli.append(i.text())
+                if(k<3):
+                    clitab.append(i.text())
+                    k += 1
+            newcli.append(vpro)
+            var.pay=set(var.pay)
+            for j in var.pay:
+                newcli.append(j)
+            newcli.append(sex)
+            print(newcli)
+            print(clitab)
+            row = 0
+            column=0
+            var.ui.tablaClientes.insertRow(row)
+            for registro in clitab:
+                cell=QtWidgets.QTableWidgetItem(registro)
+                var.ui.tablaClientes.setItem(row,column,cell)
+                column +=1
+        except Exception as error:
+            print("Error: %s", str(error))
+
+
+
