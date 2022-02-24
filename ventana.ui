@@ -14,89 +14,21 @@
    <string>Proxecto1</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="xestionClientes">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>40</y>
-      <width>201</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="baseSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;XESTIÓN CLIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::RichText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="dni">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>110</y>
+      <x>80</x>
+      <y>30</y>
       <width>113</width>
       <height>20</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="dniLabel">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>80</y>
-      <width>201</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="baseSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;DNI: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::RichText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="nombreLabel">
     <property name="geometry">
      <rect>
-      <x>481</x>
-      <y>151</y>
+      <x>430</x>
+      <y>60</y>
       <width>58</width>
       <height>16</height>
      </rect>
@@ -129,32 +61,19 @@
    <widget class="QLineEdit" name="nombre">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>151</y>
-      <width>133</width>
+      <x>500</x>
+      <y>60</y>
+      <width>291</width>
       <height>20</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>80</y>
-      <width>711</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>100</y>
-      <width>61</width>
+      <x>200</x>
+      <y>20</y>
+      <width>41</width>
       <height>41</height>
      </rect>
     </property>
@@ -168,8 +87,8 @@
    <widget class="QLabel" name="sexo">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>230</y>
+      <x>10</x>
+      <y>120</y>
       <width>102</width>
       <height>19</height>
      </rect>
@@ -202,8 +121,8 @@
    <widget class="QLabel" name="metodosPagoLabel">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>230</y>
+      <x>300</x>
+      <y>120</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -236,8 +155,8 @@
    <widget class="QLabel" name="direccionLabl">
     <property name="geometry">
      <rect>
-      <x>71</x>
-      <y>190</y>
+      <x>40</x>
+      <y>90</y>
       <width>67</width>
       <height>16</height>
      </rect>
@@ -270,9 +189,9 @@
    <widget class="QLineEdit" name="direccion">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>190</y>
-      <width>301</width>
+      <x>110</x>
+      <y>90</y>
+      <width>441</width>
       <height>21</height>
      </rect>
     </property>
@@ -280,8 +199,8 @@
    <widget class="QLabel" name="provinciaLabel">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>190</y>
+      <x>580</x>
+      <y>90</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -314,50 +233,18 @@
    <widget class="QComboBox" name="provincia">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>190</y>
+      <x>660</x>
+      <y>90</y>
       <width>131</width>
       <height>21</height>
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>230</y>
-      <width>151</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QRadioButton" name="femenino">
-       <property name="text">
-        <string>Femenino</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">elegirSexo</string>
-       </attribute>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="masculino">
-       <property name="text">
-        <string>Masculino</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">elegirSexo</string>
-       </attribute>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLineEdit" name="apellidos">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>151</y>
+      <x>110</x>
+      <y>60</y>
       <width>301</width>
       <height>21</height>
      </rect>
@@ -366,8 +253,8 @@
    <widget class="QLabel" name="apellidosLabel">
     <property name="geometry">
      <rect>
-      <x>71</x>
-      <y>151</y>
+      <x>40</x>
+      <y>60</y>
       <width>67</width>
       <height>16</height>
      </rect>
@@ -400,8 +287,8 @@
    <widget class="QLabel" name="fechaLabel">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>110</y>
+      <x>560</x>
+      <y>30</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -434,8 +321,8 @@
    <widget class="QPushButton" name="fecha">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>100</y>
+      <x>760</x>
+      <y>20</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -458,9 +345,9 @@
    <widget class="QLineEdit" name="fechaAlta">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>110</y>
-      <width>133</width>
+      <x>662</x>
+      <y>30</y>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
@@ -468,49 +355,42 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>761</width>
-      <height>541</height>
+      <x>30</x>
+      <y>0</y>
+      <width>781</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
     <widget class="QWidget" name="tabClientes">
      <attribute name="title">
       <string>Clientes</string>
      </attribute>
-     <widget class="Line" name="line_2">
+     <widget class="QPushButton" name="altaCliente">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>230</y>
-        <width>711</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="aceptar">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
+        <x>110</x>
         <y>470</y>
         <width>91</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Aceptar</string>
+       <string>Grabar</string>
       </property>
      </widget>
      <widget class="QPushButton" name="botonSalir">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>550</x>
         <y>470</y>
         <width>91</width>
         <height>31</height>
@@ -524,10 +404,19 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>250</y>
+        <y>140</y>
         <width>711</width>
-        <height>211</height>
+        <height>321</height>
        </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
       </property>
       <column>
        <property name="text">
@@ -538,6 +427,9 @@
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
        </property>
       </column>
       <column>
@@ -550,6 +442,9 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
       </column>
       <column>
        <property name="text">
@@ -561,13 +456,16 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
       </column>
      </widget>
      <widget class="QCheckBox" name="chkEfectivo">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>200</y>
+        <x>440</x>
+        <y>100</y>
         <width>70</width>
         <height>17</height>
        </rect>
@@ -575,12 +473,15 @@
       <property name="text">
        <string>Efectivo</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">elegirPago</string>
+      </attribute>
      </widget>
      <widget class="QCheckBox" name="chkTarjeta">
       <property name="geometry">
        <rect>
-        <x>540</x>
-        <y>200</y>
+        <x>550</x>
+        <y>100</y>
         <width>70</width>
         <height>17</height>
        </rect>
@@ -588,18 +489,185 @@
       <property name="text">
        <string>Tarjeta</string>
       </property>
+      <attribute name="buttonGroup">
+       <string notr="true">elegirPago</string>
+      </attribute>
      </widget>
      <widget class="QCheckBox" name="chkTransferencia">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>200</y>
+        <x>640</x>
+        <y>100</y>
         <width>91</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
        <string>Transferencia</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">elegirPago</string>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="buscar">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>0</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>lupa.jpg</normaloff>lupa.jpg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="limpiar">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>0</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>flechas.png</normaloff>flechas.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="masculino">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Masculino</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">elegirSexo</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="femenino">
+      <property name="geometry">
+       <rect>
+        <x>72</x>
+        <y>100</y>
+        <width>72</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Femenino</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">elegirSexo</string>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="modificar">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>470</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modificar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="eliminar">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>470</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="limpiar2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>470</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mensajes">
+      <property name="geometry">
+       <rect>
+        <x>286</x>
+        <y>10</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>DNI:</string>
       </property>
      </widget>
     </widget>
@@ -693,12 +761,9 @@
     </widget>
    </widget>
    <zorder>tabWidget</zorder>
-   <zorder>xestionClientes</zorder>
    <zorder>dni</zorder>
-   <zorder>dniLabel</zorder>
    <zorder>nombreLabel</zorder>
    <zorder>nombre</zorder>
-   <zorder>line</zorder>
    <zorder>label</zorder>
    <zorder>sexo</zorder>
    <zorder>metodosPagoLabel</zorder>
@@ -706,7 +771,6 @@
    <zorder>direccion</zorder>
    <zorder>provinciaLabel</zorder>
    <zorder>provincia</zorder>
-   <zorder>layoutWidget</zorder>
    <zorder>apellidos</zorder>
    <zorder>apellidosLabel</zorder>
    <zorder>fechaLabel</zorder>
@@ -743,6 +807,7 @@
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="elegirPago"/>
   <buttongroup name="elegirSexo"/>
  </buttongroups>
 </ui>

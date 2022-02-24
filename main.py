@@ -1,4 +1,4 @@
-
+import Conexion
 import events
 import venCalendar
 import ventana
@@ -24,7 +24,19 @@ class Main(QtWidgets.QMainWindow):
         clientes.Clientes.cargarProv()
         var.ui.provincia.activated[str].connect(clientes.Clientes.selProv)
         var.ui.fecha.clicked.connect(clientes.Clientes.abrirCalendar)
-        var.ui.aceptar.clicked.connect(clientes.Clientes.showClients)
+        var.ui.altaCliente.clicked.connect(clientes.Clientes.altaClientes)
+        var.ui.limpiar.clicked.connect(Conexion.Conexion.limpiarCli)
+        var.ui.limpiar2.clicked.connect(Conexion.Conexion.limpiarCli)
+        var.ui.eliminar.clicked.connect(clientes.Clientes.bajaCliente)
+        var.ui.buscar.clicked.connect(Conexion.Conexion.buscarCli)
+        Conexion.Conexion.db_connect(var.filedb)
+        Conexion.Conexion.mostrarClientes(self)
+
+
+
+
+
+
 
 class DialogSalir(QtWidgets.QDialog):
     def __init__(self):
@@ -32,7 +44,6 @@ class DialogSalir(QtWidgets.QDialog):
         var.dlgSlr = windowaviso.Ui_Dialog()
         var.dlgSlr.setupUi(self)
         var.ui.botonSalir.clicked.connect(events.Eventos.Salir2)
-
 
 class DialogCalendar(QtWidgets.QDialog):
     def __init__(self):
