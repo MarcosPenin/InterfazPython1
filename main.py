@@ -7,7 +7,8 @@ from ventana import *
 import sys
 import var
 import clientes
-from datetime import datetime
+from datetime import *
+
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
@@ -19,6 +20,9 @@ class Main(QtWidgets.QMainWindow):
         var.ui.dni.editingFinished.connect(clientes.Clientes.validarDni)
         var.ui.elegirSexo.buttonClicked.connect(clientes.Clientes.selSexo)
         var.chkPago = (var.ui.chkEfectivo, var.ui.chkTarjeta, var.ui.chkTransferencia)
+        var.filedlgabrir = FileDialogAbrir()
+        var.ui.status.setText(str(date.today()))
+
         for i in var.chkPago:
             i.stateChanged.connect(clientes.Clientes.selPago)
         clientes.Clientes.cargarProv()
@@ -29,12 +33,17 @@ class Main(QtWidgets.QMainWindow):
         var.ui.limpiar2.clicked.connect(Conexion.Conexion.limpiarCli)
         var.ui.eliminar.clicked.connect(clientes.Clientes.bajaCliente)
         var.ui.buscar.clicked.connect(Conexion.Conexion.buscarCli)
+        var.ui.modificar.clicked.connect(clientes.Clientes.modifCliente)
+        var.ui.toolbarSalir.triggered.connect(events.Eventos.Salir)
+        var.ui.toolbarAbrir.triggered.connect(events.Eventos.AbrirDir)
+        var.ui.actionAbrir.triggered.connect(events.Eventos.AbrirDir)
+        var.ui.toolbarComprimir.triggered.connect(events.Eventos.Backup)
+        var.ui.actionCrear_Backup.triggered.connect(events.Eventos.Backup)
+        var.ui.actionRecuperar_Backup.triggered.connect(events.Eventos.recuperarBackup)
+        var.ui.envioSpin.valueChanged.connect(clientes.Clientes.cambiarEnvio)
+
         Conexion.Conexion.db_connect(var.filedb)
         Conexion.Conexion.mostrarClientes(self)
-
-
-
-
 
 
 
@@ -55,6 +64,11 @@ class DialogCalendar(QtWidgets.QDialog):
         anoActual = datetime.now().year
         var.dlgCalendar.calendarWidget.setSelectedDate(QtCore.QDate(anoActual,mesActual,diaActual))
         var.dlgCalendar.calendarWidget.clicked.connect(clientes.Clientes.cargarFecha)
+
+
+class FileDialogAbrir(QtWidgets.QFileDialog):
+    def __init__(self):
+        super(FileDialogAbrir,self).__init__()
 
 
 if __name__ == '__main__':

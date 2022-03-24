@@ -1,10 +1,9 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 
 import Conexion
 import var
 
 class Clientes():
-
     def validarDni():
         try:
             tabla = "TRWAGMYFPDXBNJZSQVHLCKE"
@@ -86,6 +85,7 @@ class Clientes():
             print("Error en módulo de selección de sexo:", error)
 
     def altaClientes():
+
         try:
             newcli = []
             clitab = []
@@ -101,8 +101,10 @@ class Clientes():
             for j in var.pay:
                 newcli.append(j)
             newcli.append(sex)
+            #newcli.append(var.ui.tipoEnvio.text)
             print(newcli)
             print(clitab)
+
             if client:
                 row = 0
                 column=0
@@ -112,6 +114,7 @@ class Clientes():
                     var.ui.tablaClientes.setItem(row,column,cell)
                     column +=1
                 Conexion.Conexion.cargarCli(newcli)
+
             else:
                 print('Faltan datos')
         except Exception as error:
@@ -122,11 +125,35 @@ class Clientes():
             dni=var.ui.dni.text()
             Conexion.Conexion.bajaCli(dni)
             Conexion.Conexion.mostrarClientes(self)
-            Conexion.Conexion.limpiarCli(self)
         except Exception as error:
             print("Error cargar clientes: %s " % str(error))
 
+    def modifCliente(self):
+        try:
+            client= [var.ui.apellidos.text(), var.ui.nombre.text(),var.ui.direccion.text()]
+            client.append(var.ui.provincia.currentText())
+            client.append(sex)
+            var.pay=Clientes.selPago()
+            client.append(var.pay)
+            dni=var.ui.dni.text()
+            Conexion.Conexion.modifCli(dni,client)
+            Conexion.Conexion.mostrarClientes(self)
+        except Exception as error:
+            print("Error modificar clientes: %s " % str(error))
+            var.ui.mensajes.setText('Error al modificar')
 
+
+
+    def cambiarEnvio():
+        envio = var.ui.envioSpin.value()
+        if envio == 0:
+            var.ui.tipoEnvio.setText("Recogida por cliente")
+        if envio == 1:
+            var.ui.tipoEnvio.setText("Envío nacional express")
+        if envio == 2:
+            var.ui.tipoEnvio.setText("Envío nacional normal")
+        if envio == 3:
+            var.ui.tipoEnvio.setText("Envío internacional")
 
 
 

@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>comprimir.jpg</file>
+  </qresource>
+</RCC>
