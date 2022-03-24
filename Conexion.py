@@ -21,8 +21,8 @@ class Conexion():
     def cargarCli(cliente):
 
             query=QtSql.QSqlQuery()
-            query.prepare('insert into clientes(dni,apellidos,nombre,direccion,provincia,sexo,formatopago)'
-                          'VALUES(:dni,:apellidos,:nombre,:direccion,:provincia,:sexo,:formatopago)')
+            query.prepare('insert into clientes(dni,apellidos,nombre,direccion,provincia,sexo,formatopago,envio)'
+                          'VALUES(:dni,:apellidos,:nombre,:direccion,:provincia,:sexo,:formatopago,:envio)')
             query.bindValue(':dni',str(cliente[0]))
             query.bindValue(':apellidos',str(cliente[1]))
             query.bindValue(':nombre',str(cliente[2]))
@@ -30,6 +30,7 @@ class Conexion():
             query.bindValue(':provincia',str(cliente[4]))
             query.bindValue(':formatopago', str(cliente[5]))
             query.bindValue(':sexo',str(cliente[6]))
+            query.bindValue((':envio'),str(cliente[7]))
 
             if query.exec_():
                 var.ui.mensajes.setText('Cliente dado de alta')

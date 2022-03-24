@@ -4,7 +4,6 @@ import sys
 import zipfile
 from datetime import datetime
 
-
 from PyQt5 import QtWidgets
 
 import Conexion
@@ -59,19 +58,14 @@ class Eventos():
         except Exception as error:
             print('"Error: %s' % str(error))
 
-    def recuperarBackup(self):
 
+    def recuperarBackup(self):
         ventana_restaurar = QtWidgets.QFileDialog
         filename = ventana_restaurar.getOpenFileName(None, 'Restaurar Copia', "Copia de seguridad BD",
                                                      "Archivos Zip (*.zip)")
-
-        print(filename.__getitem__(0))
-
         var.filedb=shutil.unpack_archive(filename.__getitem__(0))
-
-        Conexion.Conexion.db_connect(var.filedb)
-
-        Conexion.Conexion.mostrarClientes(self)
+        os.system('python "E:\Interfaces\InterfazPython1\main.py"')
+        sys.exit()
 
 
 

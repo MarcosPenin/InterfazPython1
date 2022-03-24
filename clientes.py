@@ -101,7 +101,7 @@ class Clientes():
             for j in var.pay:
                 newcli.append(j)
             newcli.append(sex)
-            #newcli.append(var.ui.tipoEnvio.text)
+            newcli.append(var.ui.tipoEnvio.text())
             print(newcli)
             print(clitab)
 
@@ -154,6 +154,7 @@ class Clientes():
             var.ui.tipoEnvio.setText("Envío nacional normal")
         if envio == 3:
             var.ui.tipoEnvio.setText("Envío internacional")
+
 
 
 
