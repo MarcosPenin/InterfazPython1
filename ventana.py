@@ -357,6 +357,11 @@ class Ui_Proxecto1(object):
         item.setText(_translate("Proxecto1", "Apellidos"))
         item = self.tablaClientes.horizontalHeaderItem(2)
         item.setText(_translate("Proxecto1", "Nombre"))
+
+        for i in range(self.tablaClientes.horizontalHeader().count()):
+            self.tablaClientes.horizontalHeader().setSectionResizeMode(i, QtWidgets.QHeaderView.Stretch)
+
+            self.tablaClientes.show()
         self.chkEfectivo.setText(_translate("Proxecto1", "Efectivo"))
         self.chkTarjeta.setText(_translate("Proxecto1", "Tarjeta"))
         self.chkTransferencia.setText(_translate("Proxecto1", "Transferencia"))

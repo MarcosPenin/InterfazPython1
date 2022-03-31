@@ -10,6 +10,7 @@ import clientes
 from datetime import *
 
 
+
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
         super(Main, self).__init__()
@@ -45,6 +46,8 @@ class Main(QtWidgets.QMainWindow):
         Conexion.Conexion.db_connect(var.filedb)
         Conexion.Conexion.mostrarClientes(self)
 
+        var.ui.actionImportar_Excel.triggered.connect(events.Eventos.recuperarExcel)
+        var.ui.actionImportar_Excel.triggered.connect(Conexion.Conexion.mostrarClientes)
 
 
 class DialogSalir(QtWidgets.QDialog):

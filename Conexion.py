@@ -40,6 +40,29 @@ class Conexion():
                 var.ui.mensajes.setText('Error al cargar cliente')
                 print("Error: ",query.lastError().text())
 
+    def cargarCli2(cliente):
+
+        query = QtSql.QSqlQuery()
+        query.prepare('insert into clientes(dni,apellidos,nombre,direccion,provincia,sexo,formatopago,envio)'
+                      'VALUES(:dni,:apellidos,:nombre,:direccion,:provincia,:sexo,:formatopago,:envio)')
+        query.bindValue(':dni', str(cliente[0]))
+        query.bindValue(':apellidos', str(cliente[1]))
+        query.bindValue(':nombre', str(cliente[2]))
+        query.bindValue(':direccion', str(cliente[3]))
+        query.bindValue(':provincia', str(cliente[4]))
+        query.bindValue(':formatopago', str(cliente[5]))
+        query.bindValue(':sexo', str(cliente[6]))
+        query.bindValue((':envio'), str(cliente[7]))
+
+        if query.exec_():
+            var.ui.mensajes.setText('Excel cargado')
+
+        else:
+            var.ui.mensajes.setText('Error al cargar cliente')
+            print("Error: ", query.lastError().text())
+
+
+
     def mostrarClientes(self):
         index=0
         query=QtSql.QSqlQuery()

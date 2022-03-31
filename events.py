@@ -5,8 +5,9 @@ import zipfile
 from datetime import datetime
 
 from PyQt5 import QtWidgets
-
+import xlrd
 import Conexion
+import clientes
 import main
 import var
 
@@ -66,6 +67,37 @@ class Eventos():
         var.filedb=shutil.unpack_archive(filename.__getitem__(0))
         os.system('python "E:\Interfaces\InterfazPython1\main.py"')
         sys.exit()
+
+    def recuperarExcel():
+        documento=xlrd.open_workbook("datos.xls")
+        clientesNuevos=documento.sheet_by_index(0)
+
+        filasClientes=clientesNuevos.nrows
+        fila=0
+
+        while fila < filasClientes:
+            dni=clientesNuevos.cell_value(fila,0)
+            apellidos=clientesNuevos.cell_value(fila,1)
+            nombre=clientesNuevos.cell_value(fila,2)
+            direccion=clientesNuevos.cell_value(fila,3)
+            provincia=clientesNuevos.cell_value(fila,4)
+            formatopago = clientesNuevos.cell_value(fila, 5)
+            sexo=clientesNuevos.cell_value(fila,6)
+            envio=clientesNuevos.cell_value(fila,7)
+            newcli=[dni,apellidos,nombre,direccion,provincia,sexo,formatopago,envio]
+            fila+=1
+
+            Conexion.Conexion.cargarCli2(newcli)
+
+
+
+
+
+
+
+
+
+
 
 
 
