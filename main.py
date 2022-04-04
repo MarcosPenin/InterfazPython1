@@ -1,4 +1,5 @@
 import Conexion
+import Printer
 import events
 import venCalendar
 import ventana
@@ -45,6 +46,8 @@ class Main(QtWidgets.QMainWindow):
 
         Conexion.Conexion.db_connect(var.filedb)
         Conexion.Conexion.mostrarClientes(self)
+
+        Printer.Printer.reportCli(self)
 
         var.ui.actionImportar_Excel.triggered.connect(events.Eventos.recuperarExcel)
         var.ui.actionImportar_Excel.triggered.connect(Conexion.Conexion.mostrarClientes)

@@ -6,5 +6,6 @@ global pay
 global filedb
 global filedlgabrir
 global copia
+global rep
 filedb = 'clientes.db'
 
